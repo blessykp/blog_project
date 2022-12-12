@@ -2,23 +2,24 @@
 <template>
     <div>
        
-        <!-- <table border="0">
+       <!-- <table border="0">
 
-            <tr v-for="item in list" v-bind:key="item.id">
-                <td>{{item.userId}}</td>
-                <td>{{item.id}}</td>
+           <tr v-for="item in list" v-bind:key="item.id">
+               <td>{{item.userId}}</td>
+               <td>{{item.id}}</td>
 
-                <td>{{item.title}}</td>
-                <td>{{item.body}}</td>
-            </tr>
-        </table> -->
-        <div class="container"  v-for="item in list" v-bind:key="item.id">
-            <div class="content">{{item.userId}}{{item.id}}</div>
-            <div class="content">{{item.title}}</div>
-            <div class="content">{{item.body}}</div>
-        </div>
-       
-    </div>
+               <td>{{item.title}}</td>
+               <td>{{item.body}}</td>
+           </tr>
+       </table> -->
+       <div class="container"  v-for="item in list" v-bind:key="item.id"  >
+           <div class="content">{{item.userId}}</div>
+           <div class="content" v-bind="blogid" @click="detail(item.id)">{{item.id}}</div>
+           <div class="content">{{item.title}}</div>
+           <div class="content">{{item.body}}</div>
+       </div>
+      
+   </div>
 
 </template>
 
@@ -31,7 +32,9 @@ export default {
     name: "ContentComponent",
    data(){
     return {
-        list:"Hi"
+        list:"Hi",
+       
+        
     }
    },
     mounted() {
@@ -40,8 +43,17 @@ export default {
                 this.list = resp.data;
                 console.warn(resp.data)
                              })
-               }
+               },
+    methods : {
+       
+       detail(){
+       
+        console.log("Hi")
+       }
+        
+    }
             }
+    
 
 
 </script>
