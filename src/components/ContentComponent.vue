@@ -46,9 +46,9 @@ export default {
                },
     methods : {
        
-       detail(){
-       
-        console.log("Hi")
+       detail(item_id){
+        let id=item_id;
+        console.log("Hi"+id)
        }
         
     }

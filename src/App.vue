@@ -4,6 +4,7 @@
    
     <ContentComponent/>
     <FooterComponent/>
+    <DetailsComponent></DetailsComponent>
   </div>
 </template>
 
@@ -11,13 +12,14 @@
 import FooterComponent from './components/FooterComponent.vue'
 import HeaderComponent from './components/HeaderComponent.vue'
 import ContentComponent from './components/ContentComponent.vue'
-
+import DetailsComponent from './components/DetailsComponent.vue'
 export default {
   name: 'App',
   components: {
     FooterComponent,
     HeaderComponent,
-    ContentComponent
+    ContentComponent,
+    DetailsComponent
   }
 }
 </script>
