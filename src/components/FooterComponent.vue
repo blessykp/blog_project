@@ -17,5 +17,13 @@
   </script>
   
   <style>
+*{
+    text-align: justify;
+    padding: 1%;
+}
+  .copyright_text{
+    color: white;
+    text-align: center;
+  }
   
   </style>

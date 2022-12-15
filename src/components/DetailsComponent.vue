@@ -3,8 +3,8 @@
       
 
       
-        <div class="content">{{ list[item-1].userID}}</div>
-        <div class="content">{{list[item-1].id }}</div>
+        <div class="content">User ID : {{ list[item-1].userId}}</div>
+        <div class="content">Blog ID:{{list[item-1].id }}</div>
         <div class="content">{{ list[item-1].title }}</div>
         <div class="content">{{ list[item-1].body}}</div>
     </div>
@@ -52,7 +52,7 @@ mounted() {
     padding: 1%;
 }
 .container{
-    background-color: cadetblue;
+    background-color:#23689B;
     
 }
 .content{
