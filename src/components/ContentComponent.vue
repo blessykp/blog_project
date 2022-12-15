@@ -14,9 +14,10 @@
        </table> -->
        <div class="container"  v-for="item in list" v-bind:key="item.id"  >
            <div class="content">{{item.userId}}</div>
-           <div class="content" v-bind="blogid" @click="detail(item.id)">{{item.id}}</div>
+           <div class="content" >{{item.id}}</div>
            <div class="content">{{item.title}}</div>
            <div class="content">{{item.body}}</div>
+           <router-link :to="{ name: 'details', params: { id: item.id } }">Show details</router-link>
        </div>
       
    </div>
@@ -44,14 +45,7 @@ export default {
                 console.warn(resp.data)
                              })
                },
-    methods : {
-       
-       detail(item_id){
-        let id=item_id;
-        console.log("Hi"+id)
-       }
-        
-    }
+    
             }
     
 

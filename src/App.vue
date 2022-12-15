@@ -1,28 +1,9 @@
 <template>
   <div id="app">
-    <HeaderComponent/>
    
-    <ContentComponent/>
-    <FooterComponent/>
-    <DetailsComponent></DetailsComponent>
+    <router-view/>
   </div>
 </template>
-
-<script>
-import FooterComponent from './components/FooterComponent.vue'
-import HeaderComponent from './components/HeaderComponent.vue'
-import ContentComponent from './components/ContentComponent.vue'
-import DetailsComponent from './components/DetailsComponent.vue'
-export default {
-  name: 'App',
-  components: {
-    FooterComponent,
-    HeaderComponent,
-    ContentComponent,
-    DetailsComponent
-  }
-}
-</script>
 
 <style>
 #app {
@@ -31,6 +12,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
