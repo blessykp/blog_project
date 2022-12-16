@@ -15,7 +15,7 @@
        <div class="container"  v-for="item in list" v-bind:key="item.id"  >
            <div class="content">User ID : {{item.userId}}</div>
            <div class="content" >Blog ID: {{item.id}}</div>
-           <div class="content-2">{{item.title}}</div>
+           <div class="content-2 heading">{{item.title}}</div>
            <div class="content-2">{{item.body}}  <router-link :to="{ name: 'details', params: { id: item.id } }" >Show details</router-link></div>
           
        </div>
@@ -66,6 +66,9 @@ export default {
 }
 .content-2{
     background-color:#D6E0F0;
+}
+.heading{
+    font-weight: bold;
 }
 
 </style>
