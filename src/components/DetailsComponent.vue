@@ -5,8 +5,8 @@
       
         <div class="content">User ID : {{ list[item-1].userId}}</div>
         <div class="content">Blog ID:{{list[item-1].id }}</div>
-        <div class="content heading">{{ list[item-1].title }}</div>
-        <div class="content">{{ list[item-1].body}}</div>
+        <div class="content-2 heading">{{ list[item-1].title }}</div>
+        <div class="content-2">{{ list[item-1].body}}</div>
     </div>
 
 
@@ -60,5 +60,8 @@ mounted() {
 }
 .heading{
     font-weight: bold;
+}
+.content-2{
+    background-color:#D6E0F0;
 }
 </style>
